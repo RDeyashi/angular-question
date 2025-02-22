@@ -3,6 +3,7 @@ import { Problem1Component } from './problem-1/problem-1.component';
 import { Problem2Component } from './problem-2/problem-2.component';
 import { Problem3Component } from './problem-3/problem-3.component';
 import { authGuard } from './problem-4/gard/auth.guard';
+import { Problem5Component } from './problem-5/problem-5.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/problem/1', pathMatch: 'full' },
@@ -16,7 +17,8 @@ export const routes: Routes = [
                 path: '4',
                 loadComponent: () => import('./problem-4/problem-4.component').then(m => m.Problem4Component),
                 canActivate: [authGuard]
-            }
+            },
+            { path: '5', component: Problem5Component }
         ]
     }
 ];

@@ -1,0 +1,44 @@
+<h3>Problem 5</h3>
+<pre>
+    Problem 5: Reactive Forms Validation 
+    Task: Build a User Registration Form with Angular Reactive Forms. 
+    Requirements: 
+    • Fields: name, email, password, confirm password. 
+    • Implement custom validation for password matching. 
+    • Show real-time validation errors. 
+     
+</pre>
+
+
+<br><br>
+
+<div class="container form-box">
+    <h4>User Registration Form`</h4>
+    <form [formGroup]="userRegistration">
+        <div class="inp-group">
+            <label>Name</label>
+            <input type="text" placeholder="Enter name" formControlName="name"/>
+            @if (userRegistration.get('name')?.invalid) {
+                <span>Invalid name</span>
+            }
+        </div>
+
+        <div class="inp-group">
+            <label>Email</label>
+            <input type="email" placeholder="Enter email" formControlName="email"/>
+            @if (userRegistration.get('email')?.invalid) {
+                <span>Invalid email</span>
+            }
+        </div>
+
+        <div class="inp-group">
+            <label>Password</label>
+            <input type="password" placeholder="Enter password" formControlName="password"/>
+            @if (userRegistration.get('password')?.invalid) {
+                <span>Invalid password</span>
+            }
+        </div>
+
+        <button>Submit</button>
+    </form>
+</div>
