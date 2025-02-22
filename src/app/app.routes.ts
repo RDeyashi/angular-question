@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { Problem1Component } from './problem-1/problem-1.component';
 import { Problem2Component } from './problem-2/problem-2.component';
+import { Problem3Component } from './problem-3/problem-3.component';
 
 export const routes: Routes = [
     {path: '', redirectTo:'/problem/1', pathMatch: 'full'},
@@ -8,7 +9,8 @@ export const routes: Routes = [
         path: 'problem',
         children: [
             {path: '1', component: Problem1Component},
-            {path: '2', component: Problem2Component}
+            {path: '2', component: Problem2Component},
+            {path: '3', component: Problem3Component},
         ]
     }
 ];

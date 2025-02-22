@@ -1,3 +1,17 @@
+<h3>Problem 2</h3>
+<pre>   
+    Problem 2: RxJS & Search Autocomplete 
+    Task: Implement a real-time search bar that fetches user data using an API call. 
+    Requirements: 
+    • Use RxJS debounceTime to delay API calls. 
+    • Use switchMap to avoid multiple unnecessary requests. 
+    • Display search results in a dropdown. 
+</pre>
+
+
+<br><br>
+
+
 <input type="text" placeholder="Enter name to search" [formControl]="search" [matAutocomplete]="auto" />
 <mat-autocomplete #auto="matAutocomplete">
     @for (item of option; track $index) {

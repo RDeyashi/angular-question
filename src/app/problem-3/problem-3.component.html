@@ -1,0 +1,26 @@
+<h3>Problem 3</h3>
+<pre>
+    Problem 3: Angular Signals (Angular 16+) 
+    Task: Implement a counter using Angular Signals. 
+    Requirements: 
+    • Use signal() to store the count. 
+    • Provide buttons to increase and decrease the count. 
+    • Display the count on the screen. 
+</pre>
+
+
+<br><br>
+
+<div class="box">
+    <div class="container count-box">
+        <div></div>
+        {{count() | number}}
+        <div>
+            <button (click)="increment()">Increment</button>
+            <button (click)="decrement()">Decrement</button>
+        </div>
+        @if (message) {
+            <div style="margin-bottom: 12px;">{{message}}</div>
+        }
+    </div>
+</div>
