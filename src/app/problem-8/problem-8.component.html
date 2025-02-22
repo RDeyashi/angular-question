@@ -1,1 +1,37 @@
-<p>problem-8 works!</p>
+<h3>Problem 8</h3>
+<pre>
+    Problem 8: Fetch & Display API Data 
+    Task: Fetch user data from a REST API and display it in a table. 
+    Requirements: 
+    • Use HttpClient to fetch data from https://jsonplaceholder.typicode.com/users. 
+    • Display the user details (name, email, phone) in a table. 
+    • Show a loading indicator while data is being fetched. 
+</pre>
+
+<br><br>
+
+
+@if (isLoading) {
+<div>Loading...</div>
+}
+
+@if (apiData.length) {
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of apiData; track $index) {
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.phone}}</td>
+        </tr>
+        }
+    </tbody>
+</table>
+}
