@@ -1,0 +1,14 @@
+<h3>Problem 7</h3>
+<pre>
+    Problem 7: Two-Way Data Binding without ngModel 
+    Task: Create a custom two-way data binding for an input field without using ngModel. 
+    Requirements: 
+    • Use &#64;Input() and &#64;Output() to sync values between the parent and child components. 
+    • The value should update dynamically when the user types in the input field.
+</pre>
+
+<br><br>
+
+<h2>Custom Two-Way Data Binding Example</h2>
+<app-custom-input (valuChange)="changedValue($event)" [value]="parentValue"></app-custom-input>
+<p>Entered Value (Parent): {{ parentValue }}</p>

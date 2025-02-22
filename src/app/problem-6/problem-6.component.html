@@ -1,4 +1,14 @@
-<p>problem-6 works!</p>
+<h3>Problem 6</h3>
+<pre>
+    Problem 6: Parent-Child Component Communication 
+    Task: Implement a parent-child communication system using &#64;Input() and &#64;Output(). 
+    Requirements: 
+    • The parent component should pass a username to the child component using &#64;Input(). 
+    • The child component should have a button that emits an event to the parent using &#64;Output() and EventEmitter(). 
+</pre>
+
+
+<br><br>
 
 <app-child (messageEvent)="getMessage($event)" [username]="childCompUser"></app-child>
 
