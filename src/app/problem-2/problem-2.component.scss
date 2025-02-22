@@ -1,0 +1,14 @@
+input{
+    height: 42px;
+    width: 400px;
+    background: azure;
+    border: 1px solid black;
+    border-radius: 4px;
+    color: blue;
+    font-size: 18px;
+    &::placeholder{
+        color: rgba(0, 0, 255, 0.527);
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
