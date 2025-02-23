@@ -1,1 +1,15 @@
-<p>problem-9 works!</p>
+<h3>Problem 9</h3>
+<pre>
+    Task: Create a custom Angular Pipe that converts a string into Title Case (e.g., "angular pipes" → "Angular Pipes"). 
+    Requirements: 
+    • The pipe should be pure for better performance. 
+    • Use it inside a component to transform text dynamically.
+</pre>
+
+<br><br>
+
+<div>{{"thisis an angular custom pipe" | titleCase}}</div>
+<textarea type="text" [(ngModel)]="inpValue"></textarea>
+
+
+<div>Cusom Piep Value: {{inpValue | titleCase}}</div>
