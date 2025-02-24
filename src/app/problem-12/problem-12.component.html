@@ -1,1 +1,16 @@
-<p>problem-12 works!</p>
+<h3>Problem 12</h3>
+<pre>
+    Task: Implement a basic NgRx store for managing a counter value. 
+    Requirements: 
+    • Define an NgRx store for the counter state. 
+    • Implement actions for incrementing and decrementing. 
+    • Use selectors to get the count in a component. 
+</pre>
+
+<br><br>
+
+<div class="counter-container">
+    <h2>Counter: {{ count$ | async }}</h2>
+    <button (click)="increase()">Increment</button>
+    <button (click)="decrease()">Decrement</button>
+</div>
