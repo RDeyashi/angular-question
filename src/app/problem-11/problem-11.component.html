@@ -1,1 +1,18 @@
-<p>problem-11 works!</p>
+<h3>Problem 11</h3>
+<pre>
+    Task: Implement infinite scrolling using the Intersection Observer API. 
+    Requirements: 
+    • Load more data when the user scrolls to the bottom. 
+    • Use &#64;ViewChild() to detect the last element in the list. 
+    • Fetch data dynamically from an API.
+</pre>
+
+<br><br>
+
+
+<div class="user-list">
+    <div *ngFor="let user of users" class="user-card">
+        <p>{{ user.firstName }} {{ user.lastName }}</p>
+    </div>
+    <div #observer class="loading">Loading more...</div>
+</div>
