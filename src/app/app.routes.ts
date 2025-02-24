@@ -19,6 +19,9 @@ import { Problem17Component } from './problem-17/problem-17.component';
 import { Problem18Component } from './problem-18/problem-18.component';
 import { Problem19Component } from './problem-19/problem-19.component';
 import { Problem20Component } from './problem-20/problem-20.component';
+import { HomeComponent } from './problem-15/home/home.component';
+import { AdminComponent } from './problem-15/admin/admin.component';
+import { adminGuard } from './problem-15/admin.guard';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/problem/1', pathMatch: 'full' },
@@ -43,7 +46,13 @@ export const routes: Routes = [
             { path: '12', component: Problem12Component },
             { path: '13', component: Problem13Component },
             { path: '14', component: Problem14Component },
-            { path: '15', component: Problem15Component },
+            {
+                path: '15', component: Problem15Component, children: [
+                    { path: '', redirectTo: '/problem/15/home', pathMatch: 'full' },
+                    { path: 'home', component: HomeComponent },
+                    { path: 'admin', component: AdminComponent, canActivate: [adminGuard] }
+                ]
+            },
             { path: '16', component: Problem16Component },
             { path: '17', component: Problem17Component },
             { path: '18', component: Problem18Component },
